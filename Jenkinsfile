@@ -1,5 +1,6 @@
 pipeline {
    agent any
+      triggers { pollSCM('H/15 * * * *') } // poll every 15 minutes
    environment {
        // use your actual issuer URL here and NOT the placeholder {yourOktaDomain}
        OKTA_OAUTH2_ISSUER           = 'https://dev-238367.okta.com/oauth2/default'
